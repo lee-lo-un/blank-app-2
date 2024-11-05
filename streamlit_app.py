@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("chat bot - test")
-st.text("국영수 과목을 입력해주세요 ")
+st.text("국영수 중 한 과목을 입력해주세요 ")
 
 
 input = st.text_input("메시지를 입력하세요:")
