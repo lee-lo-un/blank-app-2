@@ -1,16 +1,22 @@
 import streamlit as st
 
-st.text("안녕하세요. 반갑습니다.")
+st.title("chat bot - test")
+st.text("국영수 과목을 입력해주세요 ")
 
-st.title("두 개의 버튼 예제")
 
-st.text_input("메시지를 입력하세요:")
-
-if st.button("버튼 1"):
-    st.write("첫 번째 버튼이 클릭되었습니다!")
-
-if st.button("버튼 2"):
-    st.write("두 번째 버튼이 클릭되었습니다!")
-
-if st.button("버튼 3"):
-  st.write("두 번째 버튼이 클릭되었습니다!")
+input = st.text_input("메시지를 입력하세요:")
+if st.button("챗봇에게 보내기"):
+    # 간단한 응답을 제공하는 챗봇 기능 예제
+    if input:
+        if "국어" in input:
+            response = "Korean"
+        elif "영어" in input:
+            response = "English"
+        elif "수학" in input:
+            response = "Math"
+        else:
+            response = "국영수 과목을 입력해주세요"
+        
+        st.write("영어 번역: ", response)
+    else:
+        st.write("메시지를 입력하세요")
